@@ -16,11 +16,17 @@
 </select>
 
 <div ng-repeat="camera in cameras">
-  <h2>{{ camera.name }}</h2>
-  <p>Price: {{ camera.price | currency }}</p>
-  <p>Rating: {{ camera.rating }}</p>
-  <p><img ng-src="{{ camera.image }}" height="100" width="130"></p>
-  <br>
+  <table>
+    <thead>{{ camera.name }}</thead>
+    <tbody>
+      <tr>
+        <td>Price: {{ camera.price | currency }}</td>
+        <td>Rating: {{ camera.rating }}</td>
+        <td><img ng-src="{{ camera.image }}" height="100" width="130"></td>
+      </tr>
+    </tbody>
+
+  </table>
 </div>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
